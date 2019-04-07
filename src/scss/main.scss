@@ -1,0 +1,82 @@
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/grid";
+@import "utils/animation";
+@import "modules/container";
+@import "modules/header";
+@import "modules/about";
+@import "modules/gallery";
+@import "modules/button";
+@import "modules/field";
+@import "modules/feedback";
+@import "modules/contact";
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $baseFontSize;
+  color: $baseFontColor;
+  height: 100%;
+}
+
+body {
+  font-family: $mainFont;
+  font-size: $baseFontSize;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: rem(60) rem(80);
+  @media (max-width: $smallTablet) {
+    padding: rem(30) rem(20);
+  }
+}
+
+h3 {
+  margin: 0 0 rem(30) 0;
+  @include font(20);
+  font-weight: 700;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin: rem(20) 0 rem(10) 0;
+  @include font(18);
+  font-weight: 700;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+p, p > a {
+  width: 100%;
+  @include font(13);
+  font-weight: 300;
+  line-height: rem(19);
+  color: #777777;
+  margin-bottom: rem(20);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

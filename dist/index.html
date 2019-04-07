@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>©IRCLE</title>
+<link href="./assets/css/app.css" rel="stylesheet"></head>
+<body>
+<div id="app">
+  <div class="container">
+    <mobile-slider-component></mobile-slider-component>
+    <div class="wrapper">
+      <div class="row center-row">
+        <div class="col col--4 col-bt--3 col-s--4">
+          <div class="container__header">
+            <header class="header">
+              <div class="header__logo">
+                <div class="logo">
+                  <div class="logo__img" @click="OpenHome">
+                    <img src="./assets/img/logo.png" alt="Circle Template">
+                  </div>
+                  <span class="logo__text">Responsive Mobile Template</span>
+                </div>
+              </div>
+              <div class="menu-wrapper">
+                <transition name="slide">
+                  <div class="menu-wrapper__toggle" v-if="menu">
+                    <nav class="menu">
+                      <ul v-bind:class="active" v-on:click.prevent>
+                        <li class="menu__link" @click="OpenHome"><a href="#" :class="['menu__link_a', {'is-active': activeMenu === 0}, {'active': activeMenu === 0}]">Home</a></li>
+                        <li class="menu__link"  @click="makeActive(1)"><a href="#" :class="['menu__link_a', {'is-active': activeMenu === 1}, {'active': activeMenu === 1}]">About</a></li>
+                        <li class="menu__link"  @click="makeActive(2)"><a href="#" :class="['menu__link_a', {'is-active': activeMenu === 2}, {'active': activeMenu === 2}]">Services</a></li>
+                        <li class="menu__link"  @click="makeActive(3)"><a href="#" :class="['menu__link_a', {'is-active': activeMenu === 3}, {'active': activeMenu === 3}]">Gallery</a></li>
+                        <li class="menu__link"  @click="makeActive(4)"><a href="#" :class="['menu__link_a', {'is-active': activeMenu === 4}, {'active': activeMenu === 4}]">Contact</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </transition>
+                <div class="menu-wrapper__logo" @click="openMenu">
+                  <i class="fa fa-bars"></i>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+        <div class="col col--8 col-bt--4">
+          <div class="container__content">
+            <transition-group name="fade" mode="out-in">
+              <about-component v-show="activeMenu === 1" :key="1"></about-component>
+              <services-component v-show="activeMenu === 2" :key="2"></services-component>
+              <gallery-component v-show="activeMenu === 3" :key="3"></gallery-component>
+              <contact-component v-show="activeMenu === 4" :key="4"></contact-component>
+            </transition-group>
+          </div>
+        </div>
+      </div>
+      <div class="container__footer">
+        <p>Copyright © {{date}} Company Name</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="./assets/js/babel-polyfill.js"></script><script type="text/javascript" src="./assets/js/app.js"></script></body>
+</html>

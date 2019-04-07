@@ -1,0 +1,66 @@
+.block {
+  padding-bottom: rem(60);
+  &__icon-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(30);
+    padding: rem(40) rem(30);
+    background-color: $default-color;
+    border-radius: rem(10);
+    @include font(36);
+    color: $orange-color;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &.active {
+      background-color: $orange-color;
+      color: $default-color;
+    }
+    &:hover {
+      background-color: $orange-color;
+      color: $default-color;
+    }
+  }
+  &__history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(30);
+    padding: rem(30);
+    background-color: $default-color;
+    border-radius: rem(10);
+    transition: 0.3s ease;
+    &_link:hover {
+        color: $orange-color;
+        font-weight: bold;
+    }
+  }
+  &__member-item {
+    height: 100%;
+    overflow: hidden;
+    padding: rem(20);
+    background-color: $default-color;
+    text-align: center;
+    border-radius: rem(10);
+    h4 {
+      margin: rem(20) 0 rem(10) 0;
+    }
+    span {
+      text-transform: uppercase;
+      color: $orange-color;
+      font-weight: 600;
+    }
+  }
+  &__foto {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+

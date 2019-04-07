@@ -1,0 +1,52 @@
+.main-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.form-application {
+  margin-bottom: rem(16);
+  &__data {
+    padding: rem(20);
+    background-color: $default-color;
+    border: 3px solid $orange-color;
+    border-radius: 25px;
+    .input-form {
+      margin-bottom: rem(24);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &.footer-email {
+      padding: 0 rem(7);
+      border: none;
+      border-bottom: 1px solid gray;
+    }
+  }
+  &__comment {
+    height: 100%;
+    padding: rem(20);
+    background-color: $default-color;
+    border: 3px solid $orange-color;
+    border-radius: 25px;
+  }
+}
+
+.form-button {
+  padding: rem(20) 0;
+}
+
+.application-form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: rem(40) rem(10);
+  background: transparent;
+  h3 {
+    padding-bottom: rem(20);
+    line-height: 1.5;
+  }
+}
+

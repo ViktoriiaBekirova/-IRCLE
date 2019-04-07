@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@mixin OpenSansRegular {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400
+}
+@mixin OpenSansMedium {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500
+}
+@mixin OpenSansBold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900
+}

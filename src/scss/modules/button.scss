@@ -1,0 +1,26 @@
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.btn {
+    position: relative;
+    display: inline-table;
+    width: fit-content;
+    padding: rem(15);
+    border-radius: 25px;
+    background: $orange-color;
+    border: none;
+    color: #fff;
+    font-weight: 900;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+}
+
+
